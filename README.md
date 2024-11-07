@@ -34,7 +34,7 @@ The project is organized into two main folders:
 ### Backend
 1. Clone the repository:
     ```bash
-    git clone https://github.com/ynfleozin/fitness-project/git
+    git clone https://github.com/ynfleozin/fitness-project.git
     cd fitness-project/fitnessBackend
     ```
 
