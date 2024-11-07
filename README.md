@@ -34,16 +34,16 @@ The project is organized into two main folders:
 ### Backend
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/fitness-tracker.git
-    cd fitness-tracker/fitnessBackend
+    git clone https://github.com/ynfleozin/fitness-project/git
+    cd fitness-project/fitnessBackend
     ```
 
 2. Set up the MySQL database:
-    - Create a MySQL database named `fitness_tracker`.
+    - Create a MySQL database named `fitness_db`.
 
 3. Update the `application.properties` file with your connection credentials:
     ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/fitness_tracker
+    spring.datasource.url=jdbc:mysql://localhost:3306/fitness_db
     spring.datasource.username=your_username
     spring.datasource.password=your_password
     ```
