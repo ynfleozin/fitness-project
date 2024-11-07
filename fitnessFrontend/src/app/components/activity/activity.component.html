@@ -1,0 +1,89 @@
+<div>
+  <div nz-row>
+    <h1 nz-card-grid [ngStyle]="gridStyle">Atividades</h1>
+  </div>
+
+  <div nz-row>
+    <div nz-col nzFlex="2">
+      <nz-card
+        nzType="inner"
+        style="margin-top: 16px"
+        nzTitle="Adicionar nova atividade"
+      >
+        <form
+          nz-form
+          [formGroup]="activityForm"
+          class="custom-form"
+          (ngSubmit)="submitForm()"
+        >
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Insira as calorias">
+              <input
+                type="text"
+                nz-input
+                formControlName="caloriesBurned"
+                placeholder="Insira as calorias queimadas"
+              />
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Insira a distância">
+              <input
+                type="number"
+                nz-input
+                formControlName="distance"
+                placeholder="Insira a distância percorrida"
+              />
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Insira os passos">
+              <input
+                type="number"
+                nz-input
+                formControlName="steps"
+                placeholder="Insira os passos"
+              />
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Insira a data">
+              <nz-date-picker
+                style="width: 100%"
+                formControlName="date"
+              ></nz-date-picker>
+            </nz-form-control>
+          </nz-form-item>
+
+          <button
+            nz-button
+            nzType="primary"
+            nzBlock
+            class="w-100"
+            [disabled]="activityForm.invalid"
+          >
+            Adicionar atividade
+          </button>
+        </form>
+      </nz-card>
+    </div>
+    <div nz-col nzFlex="3" style="margin-left: 20px">
+      <nz-card nzType="inner" style="margin-top: 16px;" nzTitle="Histórico de atividades">
+        <div nz-card-grid style="width: 100%;" *ngFor="let activity of activities">
+          <div nz-col nzSpan="30">
+              Calorias queimadas: <strong>{{activity.caloriesBurned}}</strong>
+              -
+              Distância: <strong>{{activity.distance}}</strong>KM
+              -
+              Passos: <strong>{{activity.steps}}</strong>
+              -
+              Data: <strong>{{activity.date | date}}</strong>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>

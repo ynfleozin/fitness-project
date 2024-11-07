@@ -1,0 +1,44 @@
+<nz-layout class="layout">
+  <nz-sider>
+    <div class="logo">
+      <img
+        src="https://img.freepik.com/vetores-gratis/ilustracao-do-jovem-principe-vector_1308-174367.jpg?t=st=1730992609~exp=1730996209~hmac=863b5e5d265bf69fe52b691c49138e183368e098da9c9d7576ecd60a2dbaeef3&w=740"
+        alt="Avatar"
+        class="avatar"
+      />
+      <div class="user-info">
+        <strong>Leonardo</strong>
+      </div>
+    </div>
+
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item routerLink="/painel">
+        <span nz-icon nzType="dashboard"></span>
+        <span>Painel</span>
+      </li>
+
+      <li nz-menu-item routerLink="/treinos">
+        <span nz-icon nzType="split-cells"></span>
+        <span>Treinos</span>
+      </li>
+
+      <li nz-menu-item routerLink="/atividades">
+        <span nz-icon nzType="control"></span>
+        <span>Atividades</span>
+      </li>
+
+      <li nz-menu-item routerLink="/metas">
+        <span nz-icon nzType="fund"></span>
+        <span>Metas</span>
+      </li>
+    </ul>
+  </nz-sider>
+
+  <nz-layout class="right-layout">
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
